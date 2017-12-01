@@ -106,4 +106,13 @@ public class HttpRequestUtils {
             return "Pair [key=" + key + ", value=" + value + "]";
         }
     }
+    
+    /**
+     * @param url
+     *            값은 request 첫행의 aaa bbb ccc 의 bbb 이다. 
+     * @return
+     */
+    public static Map parseStartLine(String startLine) {
+    	return parseValues(startLine, " ");
+    }
 }
